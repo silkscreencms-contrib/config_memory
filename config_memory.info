@@ -1,0 +1,7 @@
+name = Memory-based configuration
+description = Store configuration in memory
+version = 1.0
+backdrop = 1.x
+
+config_backend[ConfigMemoryStorage] = config_memory_storage.inc
+dependencies[] = config_storage
