@@ -212,7 +212,7 @@ class ConfigMemoryStorage implements ConfigStorageInterface {
    *   An array containing matching configuration object names.
    */
   public function listAll($prefix = '') {
-    return array_keys(array_filter($this->local_config, function($k) { return (strpos($k, $prefix) === 0); }, ARRAY_FILTER_USE_KEY));
+    return array_keys(array_filter($this->local_config, function($k) use ($prefix) { return (strpos($k, $prefix) === 0); }, ARRAY_FILTER_USE_KEY));
   }
 
   /**
